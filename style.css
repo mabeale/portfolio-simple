@@ -1,0 +1,158 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin: 0;
+  padding: 0;
+  font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.toggle-mode {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  z-index: 999;
+}
+.footer p {
+  word-spacing: 0;
+  font-size: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px;
+  background-color: var(--content-color);
+  border: solid 2px var(--border-color);
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+  padding-bottom: 20px;;
+}
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.dark-mode img {
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+}
+
+.light-mode img {
+  filter: saturate(3);
+  -webkit-filter: saturate(3);
+}
+
+.bio-container {
+  flex: 1;
+  padding: 0 20px;
+  min-width: 400px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  word-spacing: 0.7rem;
+  margin-top: 0;
+}
+
+.social-icons {
+  /* margin-top: 20px; */
+  display: flex;
+  justify-content:left;
+}
+
+.social-icons a {
+  /* display: inline-block; */
+  /* margin-right: 10px; */
+  font-size: 32px; 
+  padding-right: 30px;
+}
+
+.social-icons a {
+  color: var(--text-color);
+}
+
+.social-icons a:hover {
+  color: var(--border-color);
+}
+
+
+@media only screen and (max-width: 710px) {
+  
+  .container {
+    height: 100%;
+    display: block;
+  }
+
+  .image-container {
+    min-width:unset;
+    padding: 0;
+  }
+  .bio-container {
+    min-width:unset;
+    text-align: center;
+  }
+  p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    word-spacing: 0rem;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+
+.social-icons {
+  padding: 20px;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.social-icons a {
+  font-size: 42px;
+  padding-right: 0;
+} 
+
+.toggle-mode {
+  top: 14px;
+}
+}
