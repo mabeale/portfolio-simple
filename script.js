@@ -1,11 +1,14 @@
 let palette = [];
-fetch('./palette.json')
-    .then(res => res.json())
-    .then(data => palette = data);
-
 const toggleMode = document.querySelector('.toggle-mode');
 const body = document.querySelector('body');
 let isDarkMode = false;
+
+fetch('./palette.json')
+    .then(res => res.json())
+    .then(data => {
+        palette = data;
+        applyColorMode();
+    });
 
 toggleColorMode = () => {
     isDarkMode = !isDarkMode;
@@ -24,10 +27,6 @@ applyColorMode = () => {
     document.documentElement.style.setProperty('--content-color', colorPalette[randomIndex][1]);
     document.documentElement.style.setProperty('--border-color', colorPalette[randomIndex][2]);
     document.documentElement.style.setProperty('--text-color', colorPalette[randomIndex][3]);
-};
-
-window.onload = () => {
-    applyColorMode();
 };
 
 toggleMode.addEventListener('click', toggleColorMode);
