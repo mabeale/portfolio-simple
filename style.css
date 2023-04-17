@@ -92,11 +92,12 @@ p {
   padding-right: 30px;
 }
 
-.social-icons a {
+a {
   color: var(--text-color);
+  text-decoration: none;
 }
 
-.social-icons a:hover {
+a:hover {
   color: var(--border-color);
 }
 
