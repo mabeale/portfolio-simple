@@ -52,16 +52,6 @@ img {
   object-fit: cover;
 }
 
-.dark-mode img {
-  filter: sepia(100%);
-  -webkit-filter: sepia(100%);
-}
-
-.light-mode img {
-  filter: saturate(3);
-  -webkit-filter: saturate(3);
-}
-
 .bio-container {
   flex: 1;
   padding: 0 20px;
@@ -81,14 +71,11 @@ p {
 }
 
 .social-icons {
-  /* margin-top: 20px; */
   display: flex;
   justify-content:left;
 }
 
 .social-icons a {
-  /* display: inline-block; */
-  /* margin-right: 10px; */
   font-size: 32px; 
   padding-right: 30px;
 }
