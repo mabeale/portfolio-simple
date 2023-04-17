@@ -1,6 +1,8 @@
 let palette = [];
 const toggleMode = document.querySelector('.toggle-mode');
 const body = document.querySelector('body');
+let span = document.getElementById('fullYear');
+span.textContent = new Date().getFullYear();
 let isDarkMode = false;
 
 fetch('./palette.json')
