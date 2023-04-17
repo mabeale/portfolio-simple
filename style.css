@@ -34,7 +34,7 @@ footer p {
   max-width: 800px;
   padding: 30px;
   background-color: var(--content-color);
-  border: solid 2px var(--border-color);
+  border: solid 3px var(--border-color);
 }
 
 .image-container {
@@ -45,6 +45,7 @@ footer p {
 }
 
 img {
+  border: solid 3px var(--border-color);
   border-radius: 50%;
   width: 200px;
   height: 200px;
