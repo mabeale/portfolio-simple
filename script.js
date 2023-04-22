@@ -32,3 +32,5 @@ applyColorMode = () => {
 };
 
 toggleMode.addEventListener('click', toggleColorMode);
+
+body.classList.toggle('active');

@@ -5,7 +5,12 @@ body {
   font-size: 16px;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  opacity: 0;
+}
+
+body.active {
+  opacity: 1;
+  transition: opacity 1s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .toggle-mode {
@@ -17,10 +22,11 @@ body {
 }
 
 footer {
-  position:static;
+  position: static;
   bottom: 0;
   text-align: center;
 }
+
 footer p {
   word-spacing: 0;
   font-size: 1rem;
@@ -41,7 +47,7 @@ footer p {
   flex: 1;
   text-align: center;
   min-width: 200px;
-  padding-bottom: 20px;;
+  padding-bottom: 20px;
 }
 
 img {
@@ -72,11 +78,11 @@ p {
 
 .social-icons {
   display: flex;
-  justify-content:left;
+  justify-content: left;
 }
 
 .social-icons a {
-  font-size: 32px; 
+  font-size: 32px;
   padding-right: 30px;
 }
 
@@ -91,7 +97,7 @@ a:hover {
 
 
 @media only screen and (max-width: 710px) {
-  
+
   .container {
     display: block;
     margin: 0;
@@ -99,13 +105,15 @@ a:hover {
   }
 
   .image-container {
-    min-width:unset;
+    min-width: unset;
     padding: 0;
   }
+
   .bio-container {
-    min-width:unset;
+    min-width: unset;
     text-align: center;
   }
+
   p {
     display: block;
     margin-top: 1em;
@@ -122,23 +130,23 @@ a:hover {
     height: 150px;
   }
 
-.social-icons {
-  padding: 10px 20px;
-  justify-content: space-between;
-  margin: 0;
-}
+  .social-icons {
+    padding: 10px 20px;
+    justify-content: space-between;
+    margin: 0;
+  }
 
-.social-icons a {
-  font-size: 42px;
-  padding-right: 0;
-} 
+  .social-icons a {
+    font-size: 42px;
+    padding-right: 0;
+  }
 
-.toggle-mode {
-  top: 14px;
-}
+  .toggle-mode {
+    top: 14px;
+  }
 
-h2 {
-  margin-top: 0;
-}
+  h2 {
+    margin-top: 0;
+  }
 
 }
