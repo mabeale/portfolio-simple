@@ -1,6 +1,6 @@
+document.querySelector('body').classList.toggle('active');
 let palette = [];
 const toggleMode = document.querySelector('.toggle-mode');
-const body = document.querySelector('body');
 let span = document.getElementById('fullYear');
 span.textContent = new Date().getFullYear();
 let isDarkMode = false;
@@ -14,8 +14,6 @@ fetch('./palette.json')
 
 toggleColorMode = () => {
     isDarkMode = !isDarkMode;
-    body.classList.toggle('light-mode');
-    body.classList.toggle('dark-mode');
     toggleMode.querySelector('i').classList.toggle('fa-sun');
     toggleMode.querySelector('i').classList.toggle('fa-moon');
 
@@ -32,5 +30,3 @@ applyColorMode = () => {
 };
 
 toggleMode.addEventListener('click', toggleColorMode);
-
-body.classList.toggle('active');
