@@ -29,6 +29,7 @@
       <h1>Mark Beale</h1>
       <h2>Software Engineer</h2>
       <img src="./images/profile.jpeg" alt="Mark Beale">
+      <p><a href="http://markbeale.co.uk">markbeale.co.uk</a> &copy; <span id="fullYear"></span></p>
     </div>
     <div class="bio-container">
       <p>Hello and welcome to my website.</p>
@@ -51,11 +52,44 @@
       </div>
     </div>
   </div>
-  <footer>
-    <p><a href="http://markbeale.co.uk">markbeale.co.uk</a> &copy; <span id="fullYear"></span></p>
-  </footer>
   <script src="https://kit.fontawesome.com/6a7611ff69.js" crossorigin="anonymous"></script>
   <script src="./script.js" type=""></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.clouds.min.js"></script>
+  <script>
+    function setVantaColors(isDarkMode) {
+      return {
+        skyColor: isDarkMode ? 0x1c3c45 : 0x87ceeb,
+        cloudColor: isDarkMode ? 0x162a45 : 0xffffff,
+        sunColor: isDarkMode ? 0x222020 : 0xffd700,
+        sunGlareColor: isDarkMode ? 0x817571 : 0xffe4b5,
+        sunlightColor: isDarkMode ? 0x635950 : 0xfffacd
+      };
+    }
+
+    function initVanta() {
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      const colors = setVantaColors(isDarkMode);
+      VANTA.CLOUDS({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        ...colors
+      });
+    }
+
+    document.querySelector('.toggle-mode').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      initVanta();
+    });
+
+    initVanta();
+  </script>
 </body>
 
 </html>
