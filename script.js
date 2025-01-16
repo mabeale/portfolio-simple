@@ -5,6 +5,14 @@ let span = document.getElementById('fullYear');
 span.textContent = new Date().getFullYear();
 let isDarkMode = false;
 
+// get system color mode
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    isDarkMode = true;
+    toggleMode.querySelector('i').classList.add('fa-moon');
+    toggleMode.querySelector('i').classList.remove('fa-sun');
+    // document.querySelector('body').classList.add('dark-mode');
+}
+
 fetch('./palette.json')
     .then(res => res.json())
     .then(data => {
